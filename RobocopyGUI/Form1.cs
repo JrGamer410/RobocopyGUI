@@ -166,5 +166,13 @@ namespace RobocopyGUI
             robocopyProcess.Start();
             robocopyProcess.BeginOutputReadLine();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("RobocopyGUI is a simple GUI for Robocopy by JrGamer410, a powerful file copy utility in Windows.\n\n" +
+                "This application allows you to easily configure and run Robocopy commands without needing to use the command line.\n\n" +
+                "For more information about Robocopy, visit: https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy",
+                "About RobocopyGUI", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

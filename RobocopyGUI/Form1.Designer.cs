@@ -42,31 +42,32 @@
             this.copySubdirectories = new System.Windows.Forms.CheckBox();
             this.copyEmptySubdirectories = new System.Windows.Forms.CheckBox();
             this.filtersGroupBox = new System.Windows.Forms.GroupBox();
-            this.enforceMinBytes = new System.Windows.Forms.CheckBox();
-            this.minBytes = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
+            this.doOnlyArchive = new System.Windows.Forms.CheckBox();
+            this.excludeJunctionPoints = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.maxBytes = new System.Windows.Forms.NumericUpDown();
             this.enforceMaxBytes = new System.Windows.Forms.CheckBox();
-            this.excludeJunctionPoints = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.minBytes = new System.Windows.Forms.NumericUpDown();
+            this.enforceMinBytes = new System.Windows.Forms.CheckBox();
             this.verboseOutputGroupBox = new System.Windows.Forms.GroupBox();
-            this.doVerbose = new System.Windows.Forms.CheckBox();
-            this.showFileTimestamps = new System.Windows.Forms.CheckBox();
-            this.showETA = new System.Windows.Forms.CheckBox();
-            this.outputLog = new System.Windows.Forms.CheckBox();
-            this.outputLogPath = new System.Windows.Forms.TextBox();
+            this.noJobSummary = new System.Windows.Forms.CheckBox();
+            this.noJobHeader = new System.Windows.Forms.CheckBox();
             this.logFileBrowseButton = new System.Windows.Forms.Button();
+            this.outputLogPath = new System.Windows.Forms.TextBox();
+            this.outputLog = new System.Windows.Forms.CheckBox();
+            this.showETA = new System.Windows.Forms.CheckBox();
+            this.showFileTimestamps = new System.Windows.Forms.CheckBox();
+            this.doVerbose = new System.Windows.Forms.CheckBox();
             this.logOutputSaveDialog = new System.Windows.Forms.SaveFileDialog();
             this.output = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
-            this.noJobHeader = new System.Windows.Forms.CheckBox();
-            this.noJobSummary = new System.Windows.Forms.CheckBox();
-            this.doOnlyArchive = new System.Windows.Forms.CheckBox();
+            this.aboutButton = new System.Windows.Forms.Button();
             this.attributesGroupBox.SuspendLayout();
             this.filtersGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.minBytes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxBytes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minBytes)).BeginInit();
             this.verboseOutputGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -211,37 +212,25 @@
             this.filtersGroupBox.TabStop = false;
             this.filtersGroupBox.Text = "Filters";
             // 
-            // enforceMinBytes
+            // doOnlyArchive
             // 
-            this.enforceMinBytes.AutoSize = true;
-            this.enforceMinBytes.Location = new System.Drawing.Point(120, 15);
-            this.enforceMinBytes.Name = "enforceMinBytes";
-            this.enforceMinBytes.Size = new System.Drawing.Size(118, 17);
-            this.enforceMinBytes.TabIndex = 8;
-            this.enforceMinBytes.Text = "Only copy files over";
-            this.enforceMinBytes.UseVisualStyleBackColor = true;
+            this.doOnlyArchive.AutoSize = true;
+            this.doOnlyArchive.Location = new System.Drawing.Point(16, 82);
+            this.doOnlyArchive.Name = "doOnlyArchive";
+            this.doOnlyArchive.Size = new System.Drawing.Size(132, 17);
+            this.doOnlyArchive.TabIndex = 16;
+            this.doOnlyArchive.Text = "Only copy archive files";
+            this.doOnlyArchive.UseVisualStyleBackColor = true;
             // 
-            // minBytes
+            // excludeJunctionPoints
             // 
-            this.minBytes.Location = new System.Drawing.Point(244, 14);
-            this.minBytes.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.minBytes.Name = "minBytes";
-            this.minBytes.Size = new System.Drawing.Size(50, 20);
-            this.minBytes.TabIndex = 9;
-            this.minBytes.ValueChanged += new System.EventHandler(this.minBytesNum_ValueChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(300, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "bytes.";
+            this.excludeJunctionPoints.AutoSize = true;
+            this.excludeJunctionPoints.Location = new System.Drawing.Point(120, 57);
+            this.excludeJunctionPoints.Name = "excludeJunctionPoints";
+            this.excludeJunctionPoints.Size = new System.Drawing.Size(135, 17);
+            this.excludeJunctionPoints.TabIndex = 14;
+            this.excludeJunctionPoints.Text = "Exclude junction points";
+            this.excludeJunctionPoints.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -274,15 +263,37 @@
             this.enforceMaxBytes.Text = "Only copy files under";
             this.enforceMaxBytes.UseVisualStyleBackColor = true;
             // 
-            // excludeJunctionPoints
+            // label1
             // 
-            this.excludeJunctionPoints.AutoSize = true;
-            this.excludeJunctionPoints.Location = new System.Drawing.Point(120, 57);
-            this.excludeJunctionPoints.Name = "excludeJunctionPoints";
-            this.excludeJunctionPoints.Size = new System.Drawing.Size(135, 17);
-            this.excludeJunctionPoints.TabIndex = 14;
-            this.excludeJunctionPoints.Text = "Exclude junction points";
-            this.excludeJunctionPoints.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(300, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "bytes.";
+            // 
+            // minBytes
+            // 
+            this.minBytes.Location = new System.Drawing.Point(244, 14);
+            this.minBytes.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.minBytes.Name = "minBytes";
+            this.minBytes.Size = new System.Drawing.Size(50, 20);
+            this.minBytes.TabIndex = 9;
+            this.minBytes.ValueChanged += new System.EventHandler(this.minBytesNum_ValueChanged);
+            // 
+            // enforceMinBytes
+            // 
+            this.enforceMinBytes.AutoSize = true;
+            this.enforceMinBytes.Location = new System.Drawing.Point(120, 15);
+            this.enforceMinBytes.Name = "enforceMinBytes";
+            this.enforceMinBytes.Size = new System.Drawing.Size(118, 17);
+            this.enforceMinBytes.TabIndex = 8;
+            this.enforceMinBytes.Text = "Only copy files over";
+            this.enforceMinBytes.UseVisualStyleBackColor = true;
             // 
             // verboseOutputGroupBox
             // 
@@ -301,35 +312,44 @@
             this.verboseOutputGroupBox.TabStop = false;
             this.verboseOutputGroupBox.Text = "Verbose and Output";
             // 
-            // doVerbose
+            // noJobSummary
             // 
-            this.doVerbose.AutoSize = true;
-            this.doVerbose.Location = new System.Drawing.Point(14, 19);
-            this.doVerbose.Name = "doVerbose";
-            this.doVerbose.Size = new System.Drawing.Size(100, 17);
-            this.doVerbose.TabIndex = 0;
-            this.doVerbose.Text = "Verbose Output";
-            this.doVerbose.UseVisualStyleBackColor = true;
+            this.noJobSummary.AutoSize = true;
+            this.noJobSummary.Location = new System.Drawing.Point(176, 86);
+            this.noJobSummary.Name = "noJobSummary";
+            this.noJobSummary.Size = new System.Drawing.Size(106, 17);
+            this.noJobSummary.TabIndex = 16;
+            this.noJobSummary.Text = "No Job Summary";
+            this.noJobSummary.UseVisualStyleBackColor = true;
             // 
-            // showFileTimestamps
+            // noJobHeader
             // 
-            this.showFileTimestamps.AutoSize = true;
-            this.showFileTimestamps.Location = new System.Drawing.Point(14, 42);
-            this.showFileTimestamps.Name = "showFileTimestamps";
-            this.showFileTimestamps.Size = new System.Drawing.Size(131, 17);
-            this.showFileTimestamps.TabIndex = 1;
-            this.showFileTimestamps.Text = "Show File Timestamps";
-            this.showFileTimestamps.UseVisualStyleBackColor = true;
+            this.noJobHeader.AutoSize = true;
+            this.noJobHeader.Location = new System.Drawing.Point(14, 86);
+            this.noJobHeader.Name = "noJobHeader";
+            this.noJobHeader.Size = new System.Drawing.Size(98, 17);
+            this.noJobHeader.TabIndex = 15;
+            this.noJobHeader.Text = "No Job Header";
+            this.noJobHeader.UseVisualStyleBackColor = true;
             // 
-            // showETA
+            // logFileBrowseButton
             // 
-            this.showETA.AutoSize = true;
-            this.showETA.Location = new System.Drawing.Point(14, 65);
-            this.showETA.Name = "showETA";
-            this.showETA.Size = new System.Drawing.Size(77, 17);
-            this.showETA.TabIndex = 2;
-            this.showETA.Text = "Show ETA";
-            this.showETA.UseVisualStyleBackColor = true;
+            this.logFileBrowseButton.Enabled = false;
+            this.logFileBrowseButton.Location = new System.Drawing.Point(365, 42);
+            this.logFileBrowseButton.Name = "logFileBrowseButton";
+            this.logFileBrowseButton.Size = new System.Drawing.Size(37, 23);
+            this.logFileBrowseButton.TabIndex = 5;
+            this.logFileBrowseButton.Text = "...";
+            this.logFileBrowseButton.UseVisualStyleBackColor = true;
+            this.logFileBrowseButton.Click += new System.EventHandler(this.logFileBrowseButton_Click);
+            // 
+            // outputLogPath
+            // 
+            this.outputLogPath.Enabled = false;
+            this.outputLogPath.Location = new System.Drawing.Point(176, 42);
+            this.outputLogPath.Name = "outputLogPath";
+            this.outputLogPath.Size = new System.Drawing.Size(182, 20);
+            this.outputLogPath.TabIndex = 4;
             // 
             // outputLog
             // 
@@ -342,24 +362,35 @@
             this.outputLog.UseVisualStyleBackColor = true;
             this.outputLog.CheckedChanged += new System.EventHandler(this.outputLog_CheckedChanged);
             // 
-            // outputLogPath
+            // showETA
             // 
-            this.outputLogPath.Enabled = false;
-            this.outputLogPath.Location = new System.Drawing.Point(176, 42);
-            this.outputLogPath.Name = "outputLogPath";
-            this.outputLogPath.Size = new System.Drawing.Size(182, 20);
-            this.outputLogPath.TabIndex = 4;
+            this.showETA.AutoSize = true;
+            this.showETA.Location = new System.Drawing.Point(14, 65);
+            this.showETA.Name = "showETA";
+            this.showETA.Size = new System.Drawing.Size(77, 17);
+            this.showETA.TabIndex = 2;
+            this.showETA.Text = "Show ETA";
+            this.showETA.UseVisualStyleBackColor = true;
             // 
-            // logFileBrowseButton
+            // showFileTimestamps
             // 
-            this.logFileBrowseButton.Enabled = false;
-            this.logFileBrowseButton.Location = new System.Drawing.Point(365, 42);
-            this.logFileBrowseButton.Name = "logFileBrowseButton";
-            this.logFileBrowseButton.Size = new System.Drawing.Size(37, 23);
-            this.logFileBrowseButton.TabIndex = 5;
-            this.logFileBrowseButton.Text = "...";
-            this.logFileBrowseButton.UseVisualStyleBackColor = true;
-            this.logFileBrowseButton.Click += new System.EventHandler(this.logFileBrowseButton_Click);
+            this.showFileTimestamps.AutoSize = true;
+            this.showFileTimestamps.Location = new System.Drawing.Point(14, 42);
+            this.showFileTimestamps.Name = "showFileTimestamps";
+            this.showFileTimestamps.Size = new System.Drawing.Size(131, 17);
+            this.showFileTimestamps.TabIndex = 1;
+            this.showFileTimestamps.Text = "Show File Timestamps";
+            this.showFileTimestamps.UseVisualStyleBackColor = true;
+            // 
+            // doVerbose
+            // 
+            this.doVerbose.AutoSize = true;
+            this.doVerbose.Location = new System.Drawing.Point(14, 19);
+            this.doVerbose.Name = "doVerbose";
+            this.doVerbose.Size = new System.Drawing.Size(100, 17);
+            this.doVerbose.TabIndex = 0;
+            this.doVerbose.Text = "Verbose Output";
+            this.doVerbose.UseVisualStyleBackColor = true;
             // 
             // logOutputSaveDialog
             // 
@@ -395,41 +426,22 @@
             this.startButton.UseVisualStyleBackColor = true;
             this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
-            // noJobHeader
+            // aboutButton
             // 
-            this.noJobHeader.AutoSize = true;
-            this.noJobHeader.Location = new System.Drawing.Point(14, 86);
-            this.noJobHeader.Name = "noJobHeader";
-            this.noJobHeader.Size = new System.Drawing.Size(98, 17);
-            this.noJobHeader.TabIndex = 15;
-            this.noJobHeader.Text = "No Job Header";
-            this.noJobHeader.UseVisualStyleBackColor = true;
-            // 
-            // noJobSummary
-            // 
-            this.noJobSummary.AutoSize = true;
-            this.noJobSummary.Location = new System.Drawing.Point(176, 86);
-            this.noJobSummary.Name = "noJobSummary";
-            this.noJobSummary.Size = new System.Drawing.Size(106, 17);
-            this.noJobSummary.TabIndex = 16;
-            this.noJobSummary.Text = "No Job Summary";
-            this.noJobSummary.UseVisualStyleBackColor = true;
-            // 
-            // doOnlyArchive
-            // 
-            this.doOnlyArchive.AutoSize = true;
-            this.doOnlyArchive.Location = new System.Drawing.Point(16, 82);
-            this.doOnlyArchive.Name = "doOnlyArchive";
-            this.doOnlyArchive.Size = new System.Drawing.Size(132, 17);
-            this.doOnlyArchive.TabIndex = 16;
-            this.doOnlyArchive.Text = "Only copy archive files";
-            this.doOnlyArchive.UseVisualStyleBackColor = true;
+            this.aboutButton.Location = new System.Drawing.Point(792, 406);
+            this.aboutButton.Name = "aboutButton";
+            this.aboutButton.Size = new System.Drawing.Size(75, 23);
+            this.aboutButton.TabIndex = 16;
+            this.aboutButton.Text = "About";
+            this.aboutButton.UseVisualStyleBackColor = true;
+            this.aboutButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(879, 441);
+            this.Controls.Add(this.aboutButton);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.output);
@@ -454,8 +466,8 @@
             this.attributesGroupBox.PerformLayout();
             this.filtersGroupBox.ResumeLayout(false);
             this.filtersGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.minBytes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxBytes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minBytes)).EndInit();
             this.verboseOutputGroupBox.ResumeLayout(false);
             this.verboseOutputGroupBox.PerformLayout();
             this.ResumeLayout(false);
@@ -500,6 +512,7 @@
         private System.Windows.Forms.CheckBox noJobSummary;
         private System.Windows.Forms.CheckBox noJobHeader;
         private System.Windows.Forms.CheckBox doOnlyArchive;
+        private System.Windows.Forms.Button aboutButton;
     }
 }
 

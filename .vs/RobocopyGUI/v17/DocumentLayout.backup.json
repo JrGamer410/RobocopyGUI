@@ -3,12 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\srjam\\source\\repos\\RobocopyGUI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E7B07CF2-0BDE-48FE-9AF1-535E873BAD1B}|RobocopyGUI\\RobocopyGUI.csproj|C:\\Users\\srjam\\source\\repos\\RobocopyGUI\\robocopygui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E7B07CF2-0BDE-48FE-9AF1-535E873BAD1B}|RobocopyGUI\\RobocopyGUI.csproj|C:\\Users\\srjam\\source\\repos\\RobocopyGUI\\robocopygui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E7B07CF2-0BDE-48FE-9AF1-535E873BAD1B}|RobocopyGUI\\RobocopyGUI.csproj|solutionrelative:robocopygui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|RobocopyGUI||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7B07CF2-0BDE-48FE-9AF1-535E873BAD1B}|RobocopyGUI\\RobocopyGUI.csproj|c:\\users\\srjam\\source\\repos\\robocopygui\\robocopygui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7B07CF2-0BDE-48FE-9AF1-535E873BAD1B}|RobocopyGUI\\RobocopyGUI.csproj|solutionrelative:robocopygui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7B07CF2-0BDE-48FE-9AF1-535E873BAD1B}|RobocopyGUI\\RobocopyGUI.csproj|c:\\users\\srjam\\source\\repos\\robocopygui\\robocopygui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E7B07CF2-0BDE-48FE-9AF1-535E873BAD1B}|RobocopyGUI\\RobocopyGUI.csproj|solutionrelative:robocopygui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E7B07CF2-0BDE-48FE-9AF1-535E873BAD1B}|RobocopyGUI\\RobocopyGUI.csproj|c:\\users\\srjam\\source\\repos\\robocopygui\\robocopygui\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|cc4014f5-b18d-439c-9352-f99d984cca85"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +24,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,25 +36,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "RobocopyGUI",
+              "DocumentMoniker": "C:\\Users\\srjam\\source\\repos\\RobocopyGUI\\RobocopyGUI\\RobocopyGUI.csproj",
+              "RelativeDocumentMoniker": "RobocopyGUI\\RobocopyGUI.csproj",
+              "ToolTip": "C:\\Users\\srjam\\source\\repos\\RobocopyGUI\\RobocopyGUI\\RobocopyGUI.csproj",
+              "RelativeToolTip": "RobocopyGUI\\RobocopyGUI.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-07-12T08:14:46.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\srjam\\source\\repos\\RobocopyGUI\\RobocopyGUI\\Form1.cs",
               "RelativeDocumentMoniker": "RobocopyGUI\\Form1.cs",
-              "ToolTip": "C:\\Users\\srjam\\source\\repos\\RobocopyGUI\\RobocopyGUI\\Form1.cs*",
-              "RelativeToolTip": "RobocopyGUI\\Form1.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\srjam\\source\\repos\\RobocopyGUI\\RobocopyGUI\\Form1.cs",
+              "RelativeToolTip": "RobocopyGUI\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAK8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-12T07:07:03.542Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\srjam\\source\\repos\\RobocopyGUI\\RobocopyGUI\\Form1.cs",
               "RelativeDocumentMoniker": "RobocopyGUI\\Form1.cs",
-              "ToolTip": "C:\\Users\\srjam\\source\\repos\\RobocopyGUI\\RobocopyGUI\\Form1.cs [Design]*",
-              "RelativeToolTip": "RobocopyGUI\\Form1.cs [Design]*",
+              "ToolTip": "C:\\Users\\srjam\\source\\repos\\RobocopyGUI\\RobocopyGUI\\Form1.cs [Design]",
+              "RelativeToolTip": "RobocopyGUI\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-12T07:05:43.715Z",
               "EditorCaption": " [Design]"
