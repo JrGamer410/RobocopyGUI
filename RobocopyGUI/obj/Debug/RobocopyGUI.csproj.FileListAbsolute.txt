@@ -1,0 +1,9 @@
+C:\Users\srjam\source\repos\RobocopyGUI\RobocopyGUI\bin\Debug\RobocopyGUI.exe
+C:\Users\srjam\source\repos\RobocopyGUI\RobocopyGUI\bin\Debug\RobocopyGUI.pdb
+C:\Users\srjam\source\repos\RobocopyGUI\RobocopyGUI\obj\Debug\RobocopyGUI.csproj.AssemblyReference.cache
+C:\Users\srjam\source\repos\RobocopyGUI\RobocopyGUI\obj\Debug\RobocopyGUI.Form1.resources
+C:\Users\srjam\source\repos\RobocopyGUI\RobocopyGUI\obj\Debug\RobocopyGUI.Properties.Resources.resources
+C:\Users\srjam\source\repos\RobocopyGUI\RobocopyGUI\obj\Debug\RobocopyGUI.csproj.GenerateResource.cache
+C:\Users\srjam\source\repos\RobocopyGUI\RobocopyGUI\obj\Debug\RobocopyGUI.csproj.CoreCompileInputs.cache
+C:\Users\srjam\source\repos\RobocopyGUI\RobocopyGUI\obj\Debug\RobocopyGUI.exe
+C:\Users\srjam\source\repos\RobocopyGUI\RobocopyGUI\obj\Debug\RobocopyGUI.pdb
