@@ -4,7 +4,7 @@ A GUI app for the Robocopy Windows tool.
 # Supported Options
 The following options are supported:
 - Copy all subdirectories (and empty ones)
-- Don't copy file in
+- Don't copy file info
 - Only copy files over n bytes
 - Only copy files under n bytes
 - Exclude junction points
