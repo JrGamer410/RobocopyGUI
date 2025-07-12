@@ -1,5 +1,5 @@
 # RobocopyGUI
-A GUI app for the Robocopy Windows tool.
+A GUI app for the Robocopy Windows tool. Runs on Windows versions with Robocopy and .NET Framework 3.5 or higher
 
 # Supported Options
 The following options are supported:
