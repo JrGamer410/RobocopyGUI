@@ -64,6 +64,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
             this.aboutButton = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.action = new System.Windows.Forms.ComboBox();
+            this.outputProgressBar = new System.Windows.Forms.ProgressBar();
+            this.label5 = new System.Windows.Forms.Label();
+            this.currentFilePercent = new System.Windows.Forms.Label();
             this.attributesGroupBox.SuspendLayout();
             this.filtersGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxBytes)).BeginInit();
@@ -252,6 +257,7 @@
             this.maxBytes.Name = "maxBytes";
             this.maxBytes.Size = new System.Drawing.Size(50, 20);
             this.maxBytes.TabIndex = 12;
+            this.maxBytes.ValueChanged += new System.EventHandler(this.maxBytes_ValueChanged);
             // 
             // enforceMaxBytes
             // 
@@ -436,11 +442,68 @@
             this.aboutButton.UseVisualStyleBackColor = true;
             this.aboutButton.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(210, 100);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Action:";
+            // 
+            // action
+            // 
+            this.action.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.action.FormattingEnabled = true;
+            this.action.Items.AddRange(new object[] {
+            "Move files only",
+            "Move files and folders",
+            "Copy files and folders",
+            "Copy files and folders with all attributes",
+            "Test Run"});
+            this.action.Location = new System.Drawing.Point(213, 116);
+            this.action.Name = "action";
+            this.action.Size = new System.Drawing.Size(198, 21);
+            this.action.TabIndex = 18;
+            // 
+            // outputProgressBar
+            // 
+            this.outputProgressBar.Location = new System.Drawing.Point(430, 375);
+            this.outputProgressBar.Name = "outputProgressBar";
+            this.outputProgressBar.Size = new System.Drawing.Size(437, 23);
+            this.outputProgressBar.TabIndex = 19;
+            this.outputProgressBar.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(430, 344);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(118, 13);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Progress on current file:";
+            this.label5.Visible = false;
+            // 
+            // currentFilePercent
+            // 
+            this.currentFilePercent.AutoSize = true;
+            this.currentFilePercent.Location = new System.Drawing.Point(832, 344);
+            this.currentFilePercent.Name = "currentFilePercent";
+            this.currentFilePercent.Size = new System.Drawing.Size(33, 13);
+            this.currentFilePercent.TabIndex = 21;
+            this.currentFilePercent.Text = "410%";
+            this.currentFilePercent.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(879, 441);
+            this.Controls.Add(this.currentFilePercent);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.outputProgressBar);
+            this.Controls.Add(this.action);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.aboutButton);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.label3);
@@ -513,6 +576,11 @@
         private System.Windows.Forms.CheckBox noJobHeader;
         private System.Windows.Forms.CheckBox doOnlyArchive;
         private System.Windows.Forms.Button aboutButton;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox action;
+        private System.Windows.Forms.ProgressBar outputProgressBar;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label currentFilePercent;
     }
 }
 

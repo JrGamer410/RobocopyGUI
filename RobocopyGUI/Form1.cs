@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Globalization;
 
 namespace RobocopyGUI
 {
     public partial class Form1 : Form
     {
+        string lastLog = "";
         public Form1()
         {
             InitializeComponent();
@@ -33,7 +35,26 @@ namespace RobocopyGUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            action.Text = "Move files only";
+            CultureInfo uiCulture = CultureInfo.InstalledUICulture;
+            string language = uiCulture.Name;
+            switch (language)
+            {
+                case "de-DE":
+                    destinationPath.Text = "Ziel:";
+                    sourcePath.Text = "Quelle:";
+                    aboutButton.Text = "Um";
+                    browseButton.Text = "Durchsuchen...";
+                    browseButton2.Text = "Durchsuchen...";
+                    doVerbose.Text = "Ausführliche Ausgabe";
+                    break;
+                case "ru-RU":
+                    browseButton.Text = "Просматривать...";
+                    browseButton2.Text = "Просматривать...";
+                    aboutButton.Text = "О";
+                    doVerbose.Text = "Подробный вывод";
+                    break;
+            }
         }
 
         private void copySubdirectories_CheckedChanged(object sender, EventArgs e)
@@ -90,6 +111,8 @@ namespace RobocopyGUI
 
         private void startButton_Click(object sender, EventArgs e)
         {
+            currentFilePercent.Visible = true;
+            lastLog = outputLogPath.Text;
             // We'll clear the output in case the user has ran this before.
             output.Items.Clear();
             // Here we define our args string variable and add command options based on the user's inputs.
@@ -130,7 +153,7 @@ namespace RobocopyGUI
             }
             if (outputLog.Checked)
             {
-                args += $" /TEE /LOG:\"{outputLogPath.Text}\"";
+                args += $" /TEE /LOG:\"{lastLog}\"";
             }
             if (noJobHeader.Checked) {                 
                 args += " /NJH";
@@ -142,6 +165,22 @@ namespace RobocopyGUI
             if (doOnlyArchive.Checked)
             {
                 args += " /A";
+            }
+            if (action.Text == "Move files only")
+            {
+                args += " /MOV";
+            }
+            else if (action.Text == "Move files and directories")
+            {
+                args += " /MOVE";
+            }
+            else if (action.Text == "Test Run")
+            {
+                args += " /L";
+            }
+            else if (action.Text == "Copy files and folders with all attributes")
+            {
+                args += " /COPYALL";
             }
             Process robocopyProcess = new Process();
             robocopyProcess.StartInfo.FileName = "robocopy.exe";
@@ -157,6 +196,11 @@ namespace RobocopyGUI
                     this.Invoke((MethodInvoker)(() =>
                     {
                         output.Items.Add(outputEvent.Data);
+                        if (outputEvent.Data.EndsWith("%"))
+                        {
+                            currentFilePercent.Text = outputEvent.Data;
+                            outputProgressBar.Value = int.Parse(outputEvent.Data.TrimEnd('%'));
+                        }
                         output.TopIndex = output.Items.Count - 1; // Auto-scroll
                     }));
                 }
@@ -169,10 +213,19 @@ namespace RobocopyGUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("RobocopyGUI is a simple GUI for Robocopy by JrGamer410, a powerful file copy utility in Windows.\n\n" +
+            MessageBox.Show("RobocopyGUI is a simple GUI wrapper by JrGamer410 for Robocopy, a powerful file copy utility in Windows.\n\n" +
                 "This application allows you to easily configure and run Robocopy commands without needing to use the command line.\n\n" +
                 "For more information about Robocopy, visit: https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy",
                 "About RobocopyGUI", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void maxBytes_ValueChanged(object sender, EventArgs e)
+        {
+            // If the minimum is less or equal to the max, set the max to 1 above the minimum.
+            if (minBytes.Value >= maxBytes.Value)
+            {
+                maxBytes.Value = minBytes.Value + 1;
+            }
         }
     }
 }
