@@ -14,3 +14,4 @@ The following options are supported:
 - No Job Header
 - No Job Summary
 - Output Log to File
+- Changing the action for Robocopy to preform on each file
